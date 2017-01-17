@@ -1,9 +1,9 @@
 resources:
   - name: pipelines-demo-image
     type: image
-    integration: shipdeploy
+    integration: docker-integration
     pointer:
-      sourceName: "shippablesamples/samplepipelinesdemo"
+      sourceName: "premnathtg/samplepipelinesdemo"
       isPull: false
     seed:
       versionName: "latest"
@@ -16,7 +16,7 @@ resources:
 
   - name: ecs-cluster
     type: cluster
-    integration: aws
+    integration: Amazon-Dev
     pointer:
-      sourceName : "my-cluster" #name of the cluster to which we are deploying
-      region: "us-west-2"
+      sourceName : "selenium" #name of the cluster to which we are deploying
+      region: "us-east-1c"
