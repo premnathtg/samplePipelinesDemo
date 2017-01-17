@@ -9,7 +9,7 @@ jobs:
     type: deploy
     steps:
       - IN: pipelines-demo-manifest
-      - IN: docker-options
+      - IN: docker-options-prem
       - IN: ecs-cluster-prem
       - TASK: managed
         deployMethod: upgrade
