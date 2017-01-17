@@ -2,14 +2,14 @@ jobs:
   - name: pipelines-demo-manifest
     type: manifest
     steps:
-     - IN: pipelines-demo-image-prem
+     - IN: dv-img
      - TASK: managed
 
-  - name: deploy-pipelines-demo
+  - name: dv-img
     type: deploy
     steps:
       - IN: pipelines-demo-manifest
-      - IN: docker-options-prem
-      - IN: ecs-cluster-prem
+      - IN: dv-img-opts
+      - IN: env-test-ecs
       - TASK: managed
         deployMethod: upgrade
